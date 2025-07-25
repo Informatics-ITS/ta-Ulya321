@@ -1,10 +1,14 @@
 # 🏁 Tugas Akhir (TA) - Final Project
 
 **Nama Mahasiswa**: Najma Ulya Agustina
+
 **NRP**: 5025211239
-**Judul TA**: [Rancang Bangun myIF-Kantin Aplikasi Pemesanan dan Pengantaran Makanan di Kantin Informatika ITS Menggunakan Flutter dan Laravel]
-**Dosen Pembimbing**: [Nama Dosen]  
-**Dosen Ko-pembimbing**: [Nama Dosen]
+
+**Judul TA**: Rancang Bangun myIF-Kantin Aplikasi Pemesanan dan Pengantaran Makanan di Kantin Informatika ITS Menggunakan Flutter dan Laravel
+
+**Dosen Pembimbing**: Prof. Dr. Ir. Umi Laili Yuhana, S.Kom., M.Sc.
+                    
+**Dosen Ko-pembimbing**:   Bintang Nuralamsyah, S.Kom., M.Kom.
 
 ---
 
