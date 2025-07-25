@@ -2,7 +2,7 @@
 
 **Nama Mahasiswa**: Najma Ulya Agustina
 **NRP**: 5025211239
-**Judul TA**: Rancang Bangun myIF-Kantin Aplikasi Pemesanan dan Pengantaran Makanan di Kantin Informatika ITS Menggunakan Flutter dan Laravel
+**Judul TA**: [Rancang Bangun myIF-Kantin Aplikasi Pemesanan dan Pengantaran Makanan di Kantin Informatika ITS Menggunakan Flutter dan Laravel]
 **Dosen Pembimbing**: [Nama Dosen]  
 **Dosen Ko-pembimbing**: [Nama Dosen]
 
