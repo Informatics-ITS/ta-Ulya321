@@ -26,10 +26,11 @@ Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):
 
 ### Prasyarat  
 - Daftar dependensi (contoh):
-  - Python 3.10+
-  - Node.js v18+
+  - Flutter SDK 3.32.4
+  - Dart Version 3.8.1
   - MySQL 8.0
-  - [Lainnya...]
+  - XAMPP
+  
 
 ### Langkah-langkah  
 1. **Clone Repository**  
@@ -38,9 +39,22 @@ Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):
    ```
 2. **Instalasi Dependensi**
    ```bash
+
+   backend
+   akses ke url myifkantin.my.id
+   backend(manual)
+   nyalakan mysql dan apache di XAMPP
+   buka di vscode
+   cd proyek
+   php artisan migrate:fresh --seed
+   php artisan serve 
+   
+   frontend (manual)
+   flutter pub get
+   download emulator di android studio (android 13-tiramisu API 33)
    cd [folder-proyek]
-   pip install -r requirements.txt  # Contoh untuk Python
-   npm install  # Contoh untuk Node.js
+   pilih device
+   flutter run
    ```
 3. **Konfigurasi**
 - Salin/rename file .env.example menjadi .env
@@ -75,5 +89,5 @@ Pastikan proyek memenuhi kriteria berikut sebelum submit:
 ## ⁉️ Pertanyaan?
 
 Hubungi:
-- Penulis: [email@mahasiswa]
-- Pembimbing Utama: [email@pembimbing]
+- Penulis: [najmaulya01@gmail.com]
+- Pembimbing Utama: [yuhana@if.its.ac.id]
