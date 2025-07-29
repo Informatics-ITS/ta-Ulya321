@@ -1,0 +1,85 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Schema;
+use {{ rootNamespace }}Http\Controllers\Controller;
+
+class {{ class }} extends Controller
+{
+    public function index()
+    {
+        ${{ modelPluralKebab }} = {{ model }}::all();
+        return view('content.{{ modelPluralKebab }}.index', compact('{{ modelPluralKebab }}'));
+    }
+
+    public function save{{ model }}(Request $request)
+    {
+        $request->validate([
+            {{ validationAttributes }}
+        ]);
+
+        $modelInstance = new {{ model }};
+        $table = $modelInstance->getTable();
+        $primaryKey = $modelInstance->getKeyName();
+        $hasPasswordColumn = Schema::hasColumn($table, 'password');
+        $hasExtraFillable = in_array('extra', $modelInstance->getFillable());
+        $data = $request->all();
+
+        if ($hasExtraFillable) {
+            $extraData = [];
+            foreach ($data as $key => $value) {
+                if (!in_array($key, {{ allowedColumns }})) {
+                    $extraData[$key] = $value;
+                    unset($data[$key]);
+                }
+            }
+        }
+
+        if ($hasPasswordColumn && $request->filled('password')) {
+            $data['password'] = Hash::make($request->input('password'));
+        } else {
+            unset($data['password']);
+        }
+
+        if ($request->filled($primaryKey)) {
+            $item = {{ model }}::find($request->input($primaryKey));
+            if (!$item) {
+                return redirect()->route('{{ modelPluralKebab }}.index')->with('error', '{{ model }} not found');
+            }
+            if ($hasPasswordColumn && !$request->filled('password')) {
+                unset($data['password']);
+            }
+            $item->update($data);
+            if ($hasExtraFillable) {
+                $item->extra = array_merge($item->extra ?? [], $extraData);
+            }
+            $item->save();
+            $message = '{{ model }} updated successfully';
+        } else {
+            if ($hasPasswordColumn && !isset($data['password'])) {
+                $data['password'] = Hash::make('default_password');
+            }
+            if ($hasExtraFillable) {
+                $data['extra'] = $extraData;
+            }
+            {{ model }}::create($data);
+            $message = '{{ model }} created successfully';
+        }
+
+        return redirect()->route('{{ modelPluralKebab }}.index')->with('success', $message);
+    }
+
+    public function delete{{ model }}($id)
+    {
+        $item = {{ model }}::find($id);
+        if ($item) {
+            $item->delete();
+            return redirect()->route('{{ modelPluralKebab }}.index')->with('success', '{{ model }} deleted successfully');
+        }
+        return redirect()->route('{{ modelPluralKebab }}.index')->with('error', '{{ model }} not found');
+    }
+}
