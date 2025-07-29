@@ -29,40 +29,32 @@ Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):
   - Flutter SDK 3.32.4
   - Dart Version 3.8.1
   - MySQL 8.0
-  - XAMPP
+  - XAMPP 8.2.12/PHP 8.2.12
   
 
 ### Langkah-langkah  
 1. **Clone Repository**  
    ```bash
-   git clone https://github.com/Informatics-ITS/TA.git
+   git clone https://github.com/Informatics-ITS/ta-Ulya321.git
    ```
 2. **Instalasi Dependensi**
    ```bash
 
-   backend
-   akses ke url myifkantin.my.id
-   backend(manual)
-   nyalakan mysql dan apache di XAMPP
-   buka di vscode
-   cd proyek
-   php artisan migrate:fresh --seed
-   php artisan serve 
-   
-   frontend (manual)
+   mobile(frontend)
    flutter pub get
-   download emulator di android studio (android 13-tiramisu API 33)
-   cd [folder-proyek]
-   pilih device
-   flutter run
-   ```
+   
 3. **Konfigurasi**
-- Salin/rename file .env.example menjadi .env
-- Isi variabel lingkungan sesuai kebutuhan (database, API key, dll.)
+- Pada .env ubah DB_DATABASE sesuai dengan nama database yang ingin/sudah dibuat
+- Isi variabel lingkungan sesuai kebutuhan (database, dll.)
+  
 4. **Jalankan Aplikasi**
    ```bash
-   python main.py  # Contoh untuk Python
-   npm start      # Contoh untuk Node.js
+   (backend)
+   php artisan migrate:fresh --seed #membuat model di database
+   php artisan serve --host=0.0.0.0 #sesuaikan dengan ip jaringan anda
+
+   (mobile)
+   flutter run
    ```
 5. Buka browser dan kunjungi: `http://localhost:3000` (sesuaikan dengan port proyek Anda)
 
@@ -89,5 +81,5 @@ Pastikan proyek memenuhi kriteria berikut sebelum submit:
 ## ⁉️ Pertanyaan?
 
 Hubungi:
-- Penulis: [najmaulya01@gmail.com]
-- Pembimbing Utama: [yuhana@if.its.ac.id]
+- Penulis: najmaulya01@gmail.com
+- Pembimbing Utama: yuhana@if.its.ac.id
