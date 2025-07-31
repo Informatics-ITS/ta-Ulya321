@@ -62,9 +62,9 @@
 
 ## 📚 Dokumentasi Tambahan
 
-- [![Dokumentasi API]](docs/api.md)
 - [![Diagram Arsitektur]](docs/architecture.png)
-- [![User Manual]](docs/database_schema.sql)
+- [![Sequence Diagram]](docs/sequence_diagram.png)
+- [![User Manual]](docs/user_manual.pdf)
 
 ---
 
