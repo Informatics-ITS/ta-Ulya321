@@ -13,9 +13,8 @@
 ---
 
 ## 📺 Demo Aplikasi  
-Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):  
 
-[![Demo Aplikasi](https://i.ytimg.com/vi/zIfRMTxRaIs/maxresdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)  
+[![Demo Aplikasi](https://i.pinimg.com/736x/85/c9/86/85c986f9151044729ac97c8e6bdc89cc.jpg)](https://youtu.be/wYGlKiERNR0)  
 *Klik gambar di atas untuk menonton demo*
 
 ---
@@ -41,6 +40,7 @@ Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):
    ```bash
 
    mobile(frontend)
+   
    flutter pub get
    
 3. **Konfigurasi**
@@ -50,13 +50,13 @@ Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):
 4. **Jalankan Aplikasi**
    ```bash
    (backend)
-   php artisan migrate:fresh --seed #membuat model di database
+   php artisan migrate:fresh --seed #membuat migration di database
    php artisan serve --host=0.0.0.0 #sesuaikan dengan ip jaringan anda
 
    (mobile)
    flutter run
    ```
-5. Buka browser dan kunjungi: `http://localhost:3000` (sesuaikan dengan port proyek Anda)
+5. Buka browser dan kunjungi: `http://192.168.100.38:3000` (sesuaikan dengan IP jaringan dan port proyek Anda)
 
 ---
 
@@ -64,7 +64,7 @@ Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):
 
 - [![Dokumentasi API]](docs/api.md)
 - [![Diagram Arsitektur]](docs/architecture.png)
-- [![Struktur Basis Data]](docs/database_schema.sql)
+- [![User Manual]](docs/database_schema.sql)
 
 ---
 
